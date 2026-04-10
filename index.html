@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Free UK self-employed income, HMRC mileage and Universal Credit calculator. Estimate net income and UC in one page — works on phone and desktop.">
-<title>CalcPro — Income, Mileage &amp; Universal Credit (UK)</title>
+<title>uccalc.co.uk — Income, Mileage &amp; UC Calculator (UK)</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
@@ -33,6 +33,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .brand-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .brand-name{font-size:15px;font-weight:800;color:#fff}
 .brand-name em{font-style:normal;color:#60a5fa}
+.brand-tld{font-size:11px;font-weight:600;color:#93c5fd;opacity:0.8;letter-spacing:0.01em}
 .hdr-tag{font-size:11px;font-weight:500;color:#bfdbfe;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.25);padding:4px 12px;border-radius:20px;letter-spacing:0.04em}
 .hero{display:flex;min-height:420px;overflow:hidden}
 .hero-left{flex:1 1 55%;background:linear-gradient(145deg,#0b1d3a 0%,#1a3a6e 100%);display:flex;align-items:center;padding:52px 40px 52px 48px;position:relative;overflow:hidden}
@@ -184,8 +185,8 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 
 <header class="hdr">
   <a href="#top" class="brand">
-    <div class="brand-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
-    <span class="brand-name">Calc<em>Pro</em></span>
+    <div class="brand-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+    <span class="brand-name">uc<em>calc</em></span>
   </a>
   <nav class="hdr-nav" aria-label="On this page">
     <a href="#top">Home</a>
@@ -272,11 +273,11 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 
   <!-- STEP 2 — UC LOCKED -->
   <section id="section-uc" class="section-block" aria-labelledby="uc-heading">
-    <p class="section-kicker"><span>Step 2</span> — Universal Credit</p>
+    <p class="section-kicker"><span>Step 2</span> — UC</p>
     <div class="card card-uc">
       <div class="card-hdr">
         <div class="ch-icon chi-violet"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <div class="ch-txt"><h2 id="uc-heading">Universal Credit Payment</h2><p>Calculate your UC entitlement after the earnings taper</p></div>
+        <div class="ch-txt"><h2 id="uc-heading">UC Payment</h2><p>Calculate your UC entitlement after the earnings taper</p></div>
         <div class="lock-badge"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Premium</div>
       </div>
 
@@ -285,7 +286,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
         <div class="paywall">
           <div class="paywall-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
           <h3>Unlock UC Calculator</h3>
-          <p class="paywall-desc">Get instant access to the full Universal Credit calculator. See your exact UC entitlement based on your real self-employed income.</p>
+          <p class="paywall-desc">Unlock the UC Calculator — See an estimate of your Universal Credit entitlement based on your self-employed income. For planning purposes only.</p>
           <div class="paywall-price">£0.98 <span>one-time payment</span></div>
           <ul class="paywall-features">
             <li>Full UC entitlement calculator</li>
@@ -370,7 +371,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 
 <footer class="footer">
   <div class="footer-inner">
-    <p class="footer-brand">Calc<em>Pro</em> — UK calculator</p>
+    <p class="footer-brand">uc<em>calc</em> — UK calculator</p>
     <p class="footer-note"><strong>Not financial advice.</strong> Figures are estimates for planning only. Not affiliated with DWP, HMRC or the UK Government. Always verify your entitlement at gov.uk.</p>
     <p class="footer-meta">Not legal advice.</p>
     <a class="footer-top" href="#top">Back to top</a>
@@ -631,4 +632,3 @@ calcEntitlement();
 </script>
 </body>
 </html>
-
