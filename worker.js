@@ -47,6 +47,10 @@ const INDEX_HTML = `<!DOCTYPE html>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://uccalc.co.uk/">
 
+<!-- FAVICON — FIXED -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 <!-- Open Graph -->
 <meta property="og:title" content="uccalc.co.uk — Income, Mileage & UC Calculator (UK)">
 <meta property="og:description" content="Free UK self-employed income, mileage and Universal Credit calculator. Estimate net income and UC in one page — works on phone and desktop.">
@@ -763,7 +767,7 @@ function buildPDF(includeUC){
     if(isTotal){setBold(12);doc.setTextColor(br||29,bg||78,bb||216);}else{setNorm(11);doc.setTextColor(71,85,105);}
     lines.forEach((ln,i)=>doc.text(ln,labelLeft,y+5+i*lineH));
     if(isTotal){setBold(12);doc.setTextColor(br||29,bg||78,bb||216);}else{setBold(11);doc.setTextColor(30,41,59);}
-    doc.text(String(val).replace(/\\u2212/g,'-'),amountRight,y+5,{align:'right'});
+    doc.text(String(val).replace(/\u2212/g,'-'),amountRight,y+5,{align:'right'});
     setNorm(11);y+=blockH;doc.setDrawColor(226,232,240);doc.setLineWidth(0.25);doc.line(mL,y,amountRight,y);y+=2;
   }
   const salary=parseFloat(document.getElementById('incomeSalary').value)||0;
@@ -825,6 +829,11 @@ const LEGAL_HTML = `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Legal disclaimer, privacy policy and terms of use for uccalc.co.uk — UK self-employed Universal Credit calculator.">
 <title>Legal & Privacy — uccalc.co.uk</title>
+
+<!-- FAVICON — FIXED -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
