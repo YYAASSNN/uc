@@ -42,21 +42,15 @@ const INDEX_HTML = `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Free UK self-employed income, mileage and Universal Credit calculator. Estimate net income and UC in one page — works on phone and desktop.">
 <title>Income, Mileage &amp; UC Calculator (UK)</title>
-
-<!-- SEO -->
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://uccalc.co.uk/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-<!-- Open Graph -->
 <meta property="og:title" content="Income, Mileage &amp; UC Calculator (UK)">
 <meta property="og:description" content="Free UK self-employed income, mileage and Universal Credit calculator. Estimate net income and UC in one page — works on phone and desktop.">
 <meta property="og:url" content="https://uccalc.co.uk/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="UCCalc">
-
-<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -122,11 +116,11 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .hero-cta-primary{background:#fff;color:var(--navy);box-shadow:0 4px 20px rgba(0,0,0,0.25)}
 .hero-cta-primary:hover{box-shadow:0 6px 28px rgba(0,0,0,0.35)}
 .page{max-width:860px;margin:0 auto;padding:28px 16px 48px;width:100%;flex:1}
-.disclaimer-banner{display:flex;gap:8px;align-items:center;background:#fffbeb;border:1px solid #fcd34d;border-radius:var(--r-sm);padding:8px 14px;margin-bottom:16px}
+.disclaimer-banner{display:flex;gap:8px;align-items:center;justify-content:center;text-align:center;background:#fffbeb;border:1px solid #fcd34d;border-radius:var(--r-sm);padding:10px 14px;margin-bottom:16px}
 .disclaimer-banner-icon{flex-shrink:0;width:16px;height:16px}
 .disclaimer-banner-icon svg{width:100%;height:100%;stroke:#b45309;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .disclaimer-banner-title{font-size:12px;font-weight:800;color:#92400e;margin-right:4px}
-.disclaimer-banner-text p{font-size:12px;font-weight:600;color:#78350f;line-height:1.4;margin:0;display:inline}
+.disclaimer-banner-text{display:flex;flex-direction:column;align-items:center;justify-content:center}.disclaimer-banner-text p{font-size:12px;font-weight:600;color:#78350f;line-height:1.5;margin:0;display:block;max-width:780px}
 .section-block{scroll-margin-top:88px}
 .section-kicker{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--g600);margin-bottom:8px;padding:0 2px}
 .section-kicker span{color:var(--blue)}
@@ -195,17 +189,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .m-amber{background:var(--amber-light);border-color:#fde68a}.m-amber .m-label{color:#b45309}.m-amber .m-val{color:var(--amber)}
 .mif-warn{background:#fef3c7;border:1px solid #fde68a;border-radius:var(--r-sm);padding:10px 14px;font-size:13px;font-weight:600;color:#92400e;margin-top:12px;display:none}
 .mif-warn.show{display:block}
-.footer{text-align:center;padding:28px 16px 32px;font-size:12px;font-weight:600;color:var(--g600);border-top:1px solid var(--g200);background:var(--g50);margin-top:auto}
-.footer-inner{max-width:560px;margin:0 auto}
-.footer-brand{font-size:15px;font-weight:800;color:var(--g800);margin-bottom:8px}
-.footer-brand em{font-style:normal;color:var(--blue)}
-.footer-note{line-height:1.6;margin-bottom:16px}
-.footer-meta{font-size:11px;color:var(--g400);margin-bottom:4px}
-.footer-top{display:inline-flex;align-items:center;gap:6px;margin-top:18px;padding:10px 16px;color:#fff;background:var(--blue);font-weight:800;text-decoration:none;font-size:14px;border-radius:10px}
-.footer-top::after{content:'↑';font-size:18px;font-weight:900}
-.footer-top:hover{background:#1e40af}
-.page-toolbar{display:flex;justify-content:flex-end;margin-bottom:16px}
-.page-toolbar .btn-clear{padding:10px 16px;font-size:13px}
 .expense-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .expense-row input[type="text"]{flex:1;height:40px;padding:0 11px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;color:var(--g800);background:var(--g50);border:1.5px solid var(--g200);border-radius:var(--r-sm);outline:none}
 .expense-row input[type="text"]:focus{border-color:var(--blue-light);background:#fff;box-shadow:0 0 0 3px rgba(59,130,246,0.12)}
@@ -217,8 +200,10 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .btn-add-expense{display:inline-flex;align-items:center;gap:7px;margin-top:4px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--blue);background:var(--blue-ghost);border:1.5px dashed var(--blue-pale);border-radius:var(--r-sm);cursor:pointer;transition:all 0.18s}
 .btn-add-expense:hover{background:var(--blue-pale)}
 .btn-add-expense svg{width:14px;height:14px;stroke:var(--blue);stroke-width:2.5;fill:none}
+.page-toolbar{display:flex;justify-content:flex-end;margin-bottom:16px}
+.page-toolbar .btn-clear{padding:10px 16px;font-size:13px}
 
-/* ===== PAYWALL ===== */
+/* PAYWALL */
 .paywall{padding:36px 24px;text-align:center;background:linear-gradient(145deg,#f5f3ff 0%,#ede9fe 100%);border-top:1px solid #ddd6fe}
 .paywall-icon{width:68px;height:68px;background:var(--violet);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 8px 24px rgba(109,40,217,0.3)}
 .paywall-icon svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -261,6 +246,22 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .expiry-warning-bar strong{font-size:13px;color:#92400e;display:block}
 .expiry-warning-bar span{font-size:12px;font-weight:600;color:#b45309}
 .expiry-warning-bar a{color:#92400e;font-weight:800;text-decoration:underline}
+
+/* SHARE BAR */
+.share-bar{background:var(--navy);padding:10px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:6px;border-top:1px solid rgba(255,255,255,0.12);overflow:visible}
+.share-bar-legal{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;text-align:center}
+.share-bar-legal-text{font-size:10px;font-weight:600;color:#bfdbfe;display:flex;align-items:center;justify-content:center;gap:3px}
+.share-bar-legal-text svg{width:9px;height:9px;stroke:#bfdbfe;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.share-bar-legal-text a{color:#ffffff;text-decoration:none}
+.share-bar-legal-text a:hover{color:#93c5fd}
+.share-bar-dot{width:2px;height:2px;border-radius:50%;background:rgba(255,255,255,0.35);flex-shrink:0}
+.share-bar-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:-2px}
+.share-bar-label{font-size:10px;font-weight:700;color:#bfdbfe;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
+.share-btns{display:flex;align-items:center;gap:4px;position:relative;top:-2px}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;flex-shrink:0}
+.share-btn:hover{opacity:1;transform:translateY(-1px)}
+.share-btn svg{width:14px;height:14px;flex-shrink:0}
+.back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:none;border-radius:999px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(10,25,60,0.22);cursor:pointer;z-index:120;transition:background 0.18s,transform 0.18s,box-shadow 0.18s}.back-to-top:hover{background:var(--blue);transform:translateY(-2px)}.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.back-to-top{right:12px;bottom:12px}}
 </style>
 
 <a class="skip-link" href="#section-income">Skip to calculator</a>
@@ -300,14 +301,13 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </button>
   </div>
 
-  <!-- WARNING BANNER -->
   <div class="disclaimer-banner" role="alert">
     <div class="disclaimer-banner-icon">
       <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
     </div>
     <div class="disclaimer-banner-text">
-      <span class="disclaimer-banner-title">⚠ Important:</span>
-      <p>Not financial advice. Figures are estimates for planning only. Not affiliated with DWP, HMRC or the UK Government. Always verify your entitlement at <a href="https://www.gov.uk/universal-credit" target="_blank" rel="noopener" style="color:#92400e;font-weight:800;">gov.uk</a>.</p>
+      <span class="disclaimer-banner-title">Important:</span>
+      <p>Not financial advice. Figures are estimates for planning only. Not affiliated with DWP, HMRC. Always verify your entitlement at gov.uk</p>
     </div>
   </div>
 
@@ -370,7 +370,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
         </button>
       </div>
 
-      <!-- PAYWALL -->
       <div id="ucLockWrapper">
         <div class="paywall">
           <div id="expiryBanner" style="display:none;align-items:center;gap:10px;background:#fef3c7;border:1.5px solid #fcd34d;border-radius:10px;padding:12px 16px;margin-bottom:20px;text-align:left">
@@ -419,7 +418,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
         </div>
       </div>
 
-      <!-- UC CONTENT (hidden until unlocked) -->
       <div id="ucContent" style="display:none">
         <div id="expiryWarningBar" class="expiry-warning-bar" style="margin:16px 22px 0">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
@@ -471,27 +469,47 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
   </section>
 </main>
 
-
-<footer class="footer">
-  <div class="footer-inner">
-    <a href="#top" class="footer-brand" style="display:block;text-decoration:none">uc<em>calc</em> — UK calculator</a>
-    <p class="footer-note"><strong>Not financial advice.</strong> Figures are estimates for planning only. Not affiliated with DWP, HMRC or the UK Government. Always verify your entitlement at gov.uk.</p>
-    <p class="footer-meta">Not legal advice · <a href="/legal" style="color:var(--g400)">Legal &amp; Privacy Policy</a></p>
-    <p class="footer-meta">© 2025 uccalc.co.uk — All rights reserved.</p>
-    <a class="footer-top" href="#top">Back to top</a>
+<!-- SHARE BAR -->
+<div class="share-bar">
+  <div class="share-bar-legal">
+    <span class="share-bar-legal-text">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Not legal advice · <a href="/legal">Legal &amp; Privacy</a>
+    </span>
+    <div class="share-bar-dot"></div>
+    <span class="share-bar-legal-text">© 2025 uccalc.co.uk — All rights reserved.</span>
   </div>
-</footer>
+  <div class="share-bar-row">
+    <span class="share-bar-label">Share</span>
+    <div class="share-btns">
+      <a class="share-btn" style="background:#1877f2" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuccalc.co.uk%2F&quote=%F0%9F%A7%AE%20Free%20UK%20Universal%20Credit%20Calculator%20for%20self-employed%20people!%20Check%20your%20numbers%20before%20submitting%20your%20UC%20report%20%E2%80%94%20works%20out%20mileage%2C%20expenses%20%26%20shows%20exactly%20how%20much%20UC%20you%20could%20get.%20Takes%202%20mins%20%E2%9C%85%20uccalc.co.uk" target="_blank" rel="noopener" aria-label="Share on Facebook">
+        <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a class="share-btn" style="background:#25d366" href="https://wa.me/?text=Anyone%20on%20Universal%20Credit%20and%20self-employed%3F%0A%0AFound%20this%20free%20calculator%20that%20works%20out%20your%20UC%20before%20you%20submit%20%F0%9F%91%87%0A%0Auccalc.co.uk%0A%0ANo%20sign-up%20needed." target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      </a>
+      <a class="share-btn" style="background:#000" href="https://twitter.com/intent/tweet?text=%F0%9F%A7%AE%20Free%20UK%20Universal%20Credit%20Calculator%20for%20self-employed%20people%21%0A%0AWorks%20out%20your%20mileage%20deductions%2C%20expenses%20%26%20shows%20exactly%20how%20much%20UC%20you%20could%20get.%20No%20sign-up%20needed.%20Takes%202%20mins.&url=https%3A%2F%2Fuccalc.co.uk%2F" target="_blank" rel="noopener" aria-label="Share on X">
+        <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+      </a>
+      <button class="share-btn" id="copyLinkBtn" style="background:#f97316" onclick="copyLink()" aria-label="Copy link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5"></path><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>
 
 <script>
 const FIRST_MI = 833;
-const UC_PASSWORD = 'UC2620';
 const fmt = v => '£' + Math.abs(parseFloat(v)||0).toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});
 const fmtMi = v => parseInt(v).toLocaleString() + ' mi';
 
-/* PASSWORD UNLOCK — sessionStorage only, 1-hour inactivity */
 const SESSION_KEY = 'uc_session_at';
 const UC_HIDDEN_KEY = 'uc_section_hidden';
-const SESSION_MS = 1 * 60 * 60 * 1000; // 1 hour inactivity
+const SESSION_MS = 1 * 60 * 60 * 1000;
 
 function togglePwd(){
   const input = document.getElementById('pwdInput');
@@ -591,7 +609,6 @@ document.getElementById('pwdInput').addEventListener('keydown', function(e){ if(
   }
 })();
 
-/* ENTITLEMENT */
 function updateStandard(){ calcEntitlement(); }
 function calcEntitlement(){
   const s=parseFloat(document.getElementById('standardAllowance').value)||0;
@@ -606,7 +623,6 @@ function calcEntitlement(){
 });
 document.getElementById('standardAllowance').addEventListener('change',calcEntitlement);
 
-/* EXPENSES */
 function addExpenseRow(){
   const list=document.getElementById('customExpenseList');
   const row=document.createElement('div');
@@ -626,7 +642,6 @@ function getCustomExpenses(){
   return result;
 }
 
-/* CLEAR */
 function clearIncomeOnly(){
   ['startDate','endDate','incomeSalary','totalMileage','airportFees','congestionCharge','mobileBills'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('customExpenseList').innerHTML='';
@@ -655,7 +670,6 @@ function clearUCOnly(){
 }
 function clearAll(){ clearIncomeOnly(); clearUCOnly(); }
 
-/* ALERTS */
 function showErr(aId,msg){
   const a=document.getElementById(aId);a.classList.add('show');
   document.getElementById(aId+'Msg').textContent=msg;
@@ -666,7 +680,6 @@ function showOk(okId){
   document.getElementById(okId==='incOk'?'incAlert':'ucAlert').classList.remove('show');
 }
 
-/* MILEAGE */
 function getMileageAmt(mi){ return mi<=FIRST_MI?mi*0.45:(FIRST_MI*0.45)+((mi-FIRST_MI)*0.25); }
 function buildRows(rows){
   return rows.map((r,i)=>{
@@ -675,7 +688,6 @@ function buildRows(rows){
   }).join('');
 }
 
-/* CALC INCOME */
 function calcIncome(){
   const sd=document.getElementById('startDate').value;
   const ed=document.getElementById('endDate').value;
@@ -708,7 +720,6 @@ function calcIncome(){
   return true;
 }
 
-/* CALC UC */
 function calcUC(){
   const ent=parseFloat(document.getElementById('totalEntitlement').value)||0;
   const net=parseFloat(document.getElementById('totalIncomeNet').value)||0;
@@ -731,7 +742,6 @@ function calcUC(){
   return true;
 }
 
-/* PDF */
 function fmtDateLong(d){
   if(!d)return'—';
   const[y,m,day]=d.split('-');
@@ -814,12 +824,27 @@ function buildPDF(includeUC){
 function saveIncomePDF(){if(calcIncome())buildPDF(false)}
 function saveFullPDF(){if(calcIncome()&&calcUC())buildPDF(true)}
 
+function copyLink(){
+  const btn=document.getElementById('copyLinkBtn');
+  const orig='#f97316';
+  navigator.clipboard.writeText('https://uccalc.co.uk/').then(()=>{
+    btn.style.background='#059669';
+    setTimeout(()=>{btn.style.background=orig;},2000);
+  }).catch(()=>{
+    const ta=document.createElement('textarea');
+    ta.value='https://uccalc.co.uk/';
+    document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    btn.style.background='#059669';
+    setTimeout(()=>{btn.style.background=orig;},2000);
+  });
+}
 
 calcEntitlement();
 </script>
 </body>
 </html>
 `;
+
 const LEGAL_HTML = `<!DOCTYPE html>
 <html>
 <head>
@@ -852,36 +877,26 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .brand-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .brand-name{font-size:15px;font-weight:800;color:#fff}
 .brand-name em{font-style:normal;color:#60a5fa}
-.hdr-tag{font-size:11px;font-weight:500;color:#bfdbfe;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.25);padding:4px 12px;border-radius:20px;letter-spacing:0.04em}
-
-/* PAGE HERO */
 .legal-hero{background:linear-gradient(145deg,#0b1d3a 0%,#1a3a6e 100%);padding:48px 24px 52px;text-align:center}
 .legal-hero h1{font-size:clamp(22px,3vw,34px);font-weight:800;color:#fff;letter-spacing:-0.02em;margin-bottom:10px}
 .legal-hero h1 em{font-style:normal;color:#93c5fd}
 .legal-hero p{font-size:13px;font-weight:600;color:rgba(255,255,255,0.65);max-width:460px;margin:0 auto}
-
-/* TOC PILLS */
 .toc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:20px 16px 0;max-width:860px;margin:0 auto}
 .toc a{font-size:12px;font-weight:700;color:var(--blue);background:#fff;border:1.5px solid var(--blue-pale);padding:6px 14px;border-radius:20px;text-decoration:none;white-space:nowrap}
 .toc a:hover{background:var(--blue-ghost)}
-
 .page{max-width:860px;margin:0 auto;padding:28px 16px 48px;width:100%;flex:1}
-
-/* CARDS */
 .card{background:#fff;border-radius:var(--r-xl);box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
 .card-blue{border-left:4px solid var(--blue)}
 .card-violet{border-left:4px solid var(--violet)}
 .card-amber{border-left:4px solid var(--amber)}
 .card-emerald{border-left:4px solid var(--emerald)}
 .card-rose{border-left:4px solid var(--rose)}
-
 .card-hdr{display:flex;align-items:center;gap:13px;padding:16px 22px;border-bottom:1px solid var(--g100)}
 .card-blue .card-hdr{background:linear-gradient(90deg,var(--blue-ghost) 0%,#fff 100%)}
 .card-violet .card-hdr{background:linear-gradient(90deg,var(--violet-light) 0%,#fff 100%)}
 .card-amber .card-hdr{background:linear-gradient(90deg,var(--amber-light) 0%,#fff 100%)}
 .card-emerald .card-hdr{background:linear-gradient(90deg,var(--emerald-light) 0%,#fff 100%)}
 .card-rose .card-hdr{background:linear-gradient(90deg,var(--rose-light) 0%,#fff 100%)}
-
 .ch-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ch-icon svg{width:18px;height:18px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .chi-blue{background:var(--blue-pale)}.chi-blue svg{stroke:var(--blue)}
@@ -889,36 +904,36 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .chi-amber{background:var(--amber-light)}.chi-amber svg{stroke:var(--amber)}
 .chi-emerald{background:var(--emerald-light)}.chi-emerald svg{stroke:var(--emerald)}
 .chi-rose{background:var(--rose-light)}.chi-rose svg{stroke:var(--rose)}
-
 .ch-txt h2{font-size:17px;font-weight:800;color:var(--g800);letter-spacing:-0.02em}
 .ch-txt p{font-size:12px;font-weight:600;color:var(--g400);margin-top:2px}
-
 .card-body{padding:22px 24px}
 .card-body p{font-size:13px;font-weight:600;color:var(--g700);line-height:1.75;margin-bottom:12px}
 .card-body p:last-child{margin-bottom:0}
 .card-body strong{color:var(--g800);font-weight:800}
 .card-body a{color:var(--blue);text-decoration:none}
 .card-body a:hover{text-decoration:underline}
-
 .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px}
 .pill-blue{background:var(--blue-ghost);color:var(--blue);border:1px solid var(--blue-pale)}
 .pill-green{background:var(--emerald-light);color:var(--emerald);border:1px solid #a7f3d0}
 .pill-amber{background:var(--amber-light);color:var(--amber);border:1px solid #fde68a}
 .pill svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-
 .updated-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--g400);background:var(--g100);border:1px solid var(--g200);padding:4px 12px;border-radius:20px;margin-bottom:20px}
-
-/* FOOTER */
-.footer{text-align:center;padding:28px 16px 32px;font-size:12px;font-weight:600;color:var(--g600);border-top:1px solid var(--g200);background:var(--g50);margin-top:auto}
-.footer-inner{max-width:560px;margin:0 auto}
-.footer-brand{font-size:15px;font-weight:800;color:var(--g800);margin-bottom:8px}
-.footer-brand em{font-style:normal;color:var(--blue)}
-.footer-note{line-height:1.6;margin-bottom:16px}
-.footer-meta{font-size:11px;color:var(--g400);margin-bottom:4px}
-.footer-top{display:inline-flex;align-items:center;gap:6px;margin-top:18px;padding:10px 16px;color:#fff;background:var(--blue);font-weight:800;text-decoration:none;font-size:14px;border-radius:10px}
-.footer-top::after{content:'↑';font-size:18px;font-weight:900}
-.footer-top:hover{background:#1e40af}
+/* SHARE BAR */
+.share-bar{background:var(--navy);padding:10px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:6px;border-top:1px solid rgba(255,255,255,0.12);margin-top:auto;overflow:visible}
+.share-bar-legal{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;text-align:center}
+.share-bar-legal-text{font-size:10px;font-weight:600;color:#bfdbfe;display:flex;align-items:center;justify-content:center;gap:3px}
+.share-bar-legal-text svg{width:9px;height:9px;stroke:#bfdbfe;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.share-bar-legal-text a{color:#ffffff;text-decoration:none}
+.share-bar-legal-text a:hover{color:#93c5fd}
+.share-bar-dot{width:2px;height:2px;border-radius:50%;background:rgba(255,255,255,0.35);flex-shrink:0}
+.share-bar-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:-2px}
+.share-bar-label{font-size:10px;font-weight:700;color:#bfdbfe;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
+.share-btns{display:flex;align-items:center;gap:4px;position:relative;top:-2px}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;flex-shrink:0}
+.share-btn:hover{opacity:1;transform:translateY(-1px)}
+.share-btn svg{width:14px;height:14px;flex-shrink:0}
+.back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:none;border-radius:999px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(10,25,60,0.22);cursor:pointer;z-index:120;transition:background 0.18s,transform 0.18s,box-shadow 0.18s}.back-to-top:hover{background:var(--blue);transform:translateY(-2px)}.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.back-to-top{right:12px;bottom:12px}}
 </style>
 </head>
 <body>
@@ -951,13 +966,11 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 </nav>
 
 <main class="page">
-
   <div class="updated-tag">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
     Last updated: April 2025
   </div>
 
-  <!-- DISCLAIMER -->
   <section id="disclaimer" class="card card-blue" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-blue"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
@@ -971,7 +984,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- NO LIABILITY -->
   <section id="no-liability" class="card card-rose" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-rose"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
@@ -984,7 +996,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- MIF NOTE -->
   <section id="mif-note" class="card card-amber" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-amber"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
@@ -997,7 +1008,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- PRIVACY -->
   <section id="privacy" class="card card-emerald" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-emerald"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
@@ -1016,7 +1026,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- COOKIES -->
   <section id="cookies" class="card card-blue" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
@@ -1033,7 +1042,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- THIRD PARTIES -->
   <section id="third-parties" class="card card-violet" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-violet"><svg viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg></div>
@@ -1048,7 +1056,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- PAYMENTS -->
   <section id="payments" class="card card-violet" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-violet"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
@@ -1065,7 +1072,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="card card-blue" style="scroll-margin-top:88px">
     <div class="card-hdr">
       <div class="ch-icon chi-blue"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
@@ -1074,7 +1080,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     <div class="card-body">
       <p>If you have any questions about this privacy policy, the disclaimer, or how this tool works — or if you believe any figures in the calculator are incorrect or out of date — please send us a message below and we will get back to you.</p>
       <p>This page was last updated in <strong>April 2025</strong>. We may update it from time to time — please check back periodically.</p>
-
       <div id="contactSuccess" style="display:none;align-items:center;gap:9px;font-size:13px;font-weight:700;padding:10px 14px;border-radius:8px;margin:14px 0;background:#d1fae5;color:#059669;border:1px solid #a7f3d0">
         <svg viewBox="0 0 24 24" style="width:15px;height:15px;flex-shrink:0;fill:none;stroke:#059669;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         Message sent! We'll be in touch soon.
@@ -1083,7 +1088,6 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
         <svg viewBox="0 0 24 24" style="width:15px;height:15px;flex-shrink:0;fill:none;stroke:#e11d48;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
         <span id="contactErrorMsg">Something went wrong. Please try again.</span>
       </div>
-
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
         <div>
           <label style="display:block;font-size:13px;font-weight:700;color:#334155;margin-bottom:5px">Your name <span style="color:#e11d48">*</span></label>
@@ -1106,59 +1110,56 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
       </div>
     </div>
   </section>
-
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <p class="footer-brand">uc<em>calc</em> — UK calculator</p>
-
-    <div style="margin:18px 0 4px;text-align:center">
-      <p style="font-size:13px;color:var(--g400);margin-bottom:10px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase">Share this free tool</p>
-      <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
-
-        <!-- WhatsApp -->
-        <a id="shareWhatsApp" href="#" onclick="shareWhatsApp(event)" title="Share on WhatsApp"
-          style="display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;text-decoration:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;transition:opacity 0.15s"
-          onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.857a.5.5 0 0 0 .608.608l6.002-1.471A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.367l-.36-.214-3.714.91.928-3.605-.234-.371A9.818 9.818 0 1 1 12 21.818z"/></svg>
-          WhatsApp
-        </a>
-
-        <!-- Facebook -->
-        <a id="shareFacebook" href="#" onclick="shareFacebook(event)" title="Share on Facebook"
-          style="display:inline-flex;align-items:center;gap:7px;background:#1877F2;color:#fff;text-decoration:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;transition:opacity 0.15s"
-          onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-          Facebook
-        </a>
-
-        <!-- Twitter/X -->
-        <a id="shareTwitter" href="#" onclick="shareTwitter(event)" title="Share on X (Twitter)"
-          style="display:inline-flex;align-items:center;gap:7px;background:#000;color:#fff;text-decoration:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;transition:opacity 0.15s"
-          onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-          <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.631 5.903-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          X / Twitter
-        </a>
-
-        <!-- Copy Link -->
-        <button onclick="copyLink()" title="Copy link"
-          style="display:inline-flex;align-items:center;gap:7px;background:var(--card);color:var(--g200);border:1.5px solid var(--border);border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:opacity 0.15s"
-          onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'" id="copyLinkBtn">
-          <svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-          Copy link
-        </button>
-
-      </div>
-    </div>
-
-    <p class="footer-note" style="margin-top:16px"><strong>Not financial advice.</strong> Figures are estimates for planning only. Not affiliated with DWP, HMRC or the UK Government. Always verify your entitlement at gov.uk.</p>
-    <p class="footer-meta">© 2025 uccalc.co.uk — All rights reserved. · <a href="legal.html" style="color:var(--g400)">Legal &amp; Privacy</a></p>
-    <a class="footer-top" href="#top">Back to top</a>
+<!-- SHARE BAR -->
+<div class="share-bar">
+  <div class="share-bar-legal">
+    <span class="share-bar-legal-text">
+      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Not legal advice · <a href="/legal">Legal &amp; Privacy</a>
+    </span>
+    <div class="share-bar-dot"></div>
+    <span class="share-bar-legal-text">© 2025 uccalc.co.uk — All rights reserved.</span>
   </div>
-</footer>
+  <div class="share-bar-row">
+    <span class="share-bar-label">Share</span>
+    <div class="share-btns">
+      <a class="share-btn" style="background:#1877f2" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuccalc.co.uk%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">
+        <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a class="share-btn" style="background:#25d366" href="https://wa.me/?text=Anyone%20on%20Universal%20Credit%20and%20self-employed%3F%20Found%20this%20free%20calculator%20%F0%9F%91%87%20uccalc.co.uk" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      </a>
+      <a class="share-btn" style="background:#000" href="https://twitter.com/intent/tweet?text=Free+UK+UC+calculator+for+the+self-employed&url=https%3A%2F%2Fuccalc.co.uk%2F" target="_blank" rel="noopener" aria-label="Share on X">
+        <svg viewBox="0 0 24 24" fill="#fff" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+      </a>
+      <button class="share-btn" id="copyLinkBtnLegal" style="background:#f97316" onclick="copyLinkLegal()" aria-label="Copy link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5"></path><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>
 
 <script>
+function copyLinkLegal(){
+  const btn=document.getElementById('copyLinkBtnLegal');
+  navigator.clipboard.writeText('https://uccalc.co.uk/').then(()=>{
+    btn.style.background='#059669';
+    setTimeout(()=>{btn.style.background='#f97316';},2000);
+  }).catch(()=>{
+    const ta=document.createElement('textarea');
+    ta.value='https://uccalc.co.uk/';
+    document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    btn.style.background='#059669';
+    setTimeout(()=>{btn.style.background='#f97316';},2000);
+  });
+}
+
 async function submitLegalContact(){
   const name=document.getElementById('legalContactName').value.trim();
   const email=document.getElementById('legalContactEmail').value.trim();
@@ -1193,57 +1194,27 @@ async function submitLegalContact(){
   btn.disabled=false;
   btn.innerHTML='<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send message';
 }
-
-const SHARE_URL = 'https://uccalc.co.uk';
-const SHARE_TEXT = 'Free UK Universal Credit calculator for self-employed people — no sign-up needed. Works out your mileage & expenses then shows your estimated UC payment. Save as PDF too!';
-
-function shareWhatsApp(e){
-  e.preventDefault();
-  window.open('https://wa.me/?text=' + encodeURIComponent(SHARE_TEXT + '\n\n' + SHARE_URL), '_blank');
-}
-function shareFacebook(e){
-  e.preventDefault();
-  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(SHARE_URL), '_blank');
-}
-function shareTwitter(e){
-  e.preventDefault();
-  window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(SHARE_URL) + '&text=' + encodeURIComponent(SHARE_TEXT), '_blank');
-}
-async function copyLink(){
-  try {
-    await navigator.clipboard.writeText(SHARE_URL);
-    const btn = document.getElementById('copyLinkBtn');
-    const orig = btn.innerHTML;
-    btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
-    btn.style.color = '#16a34a';
-    btn.style.borderColor = '#16a34a';
-    setTimeout(() => { btn.innerHTML = orig; btn.style.color = ''; btn.style.borderColor = ''; }, 2000);
-  } catch(e) {
-    prompt('Copy this link:', SHARE_URL);
-  }
-}
 </script>
 </body>
 </html>`;
+
 const SITEMAP_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://uccalc.co.uk/</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://uccalc.co.uk/legal.html</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-
 </urlset>
 `;
+
 const FAVICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#0b1d3a"/>
   <rect y="29" width="32" height="3" rx="0" fill="#1d4ed8"/>
