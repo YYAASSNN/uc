@@ -1112,7 +1112,47 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 <footer class="footer">
   <div class="footer-inner">
     <p class="footer-brand">uc<em>calc</em> — UK calculator</p>
-    <p class="footer-note"><strong>Not financial advice.</strong> Figures are estimates for planning only. Not affiliated with DWP, HMRC or the UK Government. Always verify your entitlement at gov.uk.</p>
+
+    <div style="margin:18px 0 4px;text-align:center">
+      <p style="font-size:13px;color:var(--g400);margin-bottom:10px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase">Share this free tool</p>
+      <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap">
+
+        <!-- WhatsApp -->
+        <a id="shareWhatsApp" href="#" onclick="shareWhatsApp(event)" title="Share on WhatsApp"
+          style="display:inline-flex;align-items:center;gap:7px;background:#25D366;color:#fff;text-decoration:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;transition:opacity 0.15s"
+          onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.528 5.855L.057 23.857a.5.5 0 0 0 .608.608l6.002-1.471A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.367l-.36-.214-3.714.91.928-3.605-.234-.371A9.818 9.818 0 1 1 12 21.818z"/></svg>
+          WhatsApp
+        </a>
+
+        <!-- Facebook -->
+        <a id="shareFacebook" href="#" onclick="shareFacebook(event)" title="Share on Facebook"
+          style="display:inline-flex;align-items:center;gap:7px;background:#1877F2;color:#fff;text-decoration:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;transition:opacity 0.15s"
+          onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook
+        </a>
+
+        <!-- Twitter/X -->
+        <a id="shareTwitter" href="#" onclick="shareTwitter(event)" title="Share on X (Twitter)"
+          style="display:inline-flex;align-items:center;gap:7px;background:#000;color:#fff;text-decoration:none;border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;transition:opacity 0.15s"
+          onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.631 5.903-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X / Twitter
+        </a>
+
+        <!-- Copy Link -->
+        <button onclick="copyLink()" title="Copy link"
+          style="display:inline-flex;align-items:center;gap:7px;background:var(--card);color:var(--g200);border:1.5px solid var(--border);border-radius:8px;padding:9px 16px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:opacity 0.15s"
+          onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='1'" id="copyLinkBtn">
+          <svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copy link
+        </button>
+
+      </div>
+    </div>
+
+    <p class="footer-note" style="margin-top:16px"><strong>Not financial advice.</strong> Figures are estimates for planning only. Not affiliated with DWP, HMRC or the UK Government. Always verify your entitlement at gov.uk.</p>
     <p class="footer-meta">© 2025 uccalc.co.uk — All rights reserved. · <a href="legal.html" style="color:var(--g400)">Legal &amp; Privacy</a></p>
     <a class="footer-top" href="#top">Back to top</a>
   </div>
@@ -1152,6 +1192,35 @@ async function submitLegalContact(){
   }
   btn.disabled=false;
   btn.innerHTML='<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send message';
+}
+
+const SHARE_URL = 'https://uccalc.co.uk';
+const SHARE_TEXT = 'Free UK Universal Credit calculator for self-employed people — no sign-up needed. Works out your mileage & expenses then shows your estimated UC payment. Save as PDF too!';
+
+function shareWhatsApp(e){
+  e.preventDefault();
+  window.open('https://wa.me/?text=' + encodeURIComponent(SHARE_TEXT + '\n\n' + SHARE_URL), '_blank');
+}
+function shareFacebook(e){
+  e.preventDefault();
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(SHARE_URL), '_blank');
+}
+function shareTwitter(e){
+  e.preventDefault();
+  window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(SHARE_URL) + '&text=' + encodeURIComponent(SHARE_TEXT), '_blank');
+}
+async function copyLink(){
+  try {
+    await navigator.clipboard.writeText(SHARE_URL);
+    const btn = document.getElementById('copyLinkBtn');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+    btn.style.color = '#16a34a';
+    btn.style.borderColor = '#16a34a';
+    setTimeout(() => { btn.innerHTML = orig; btn.style.color = ''; btn.style.borderColor = ''; }, 2000);
+  } catch(e) {
+    prompt('Copy this link:', SHARE_URL);
+  }
 }
 </script>
 </body>
