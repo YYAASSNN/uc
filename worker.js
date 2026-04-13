@@ -98,11 +98,11 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .brand-name em{font-style:normal;color:#60a5fa}
 .brand-tld{font-size:11px;font-weight:600;color:#93c5fd;opacity:0.8;letter-spacing:0.01em}
 .hdr-tag{font-size:11px;font-weight:500;color:#bfdbfe;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.25);padding:4px 12px;border-radius:20px;letter-spacing:0.04em}
-.hero{display:flex;min-height:420px;overflow:hidden}
+.hero{display:flex;min-height:260px;overflow:hidden;border-radius:0 0 20px 20px;overflow:hidden}
 .hero-left{flex:1 1 55%;background:linear-gradient(145deg,#0b1d3a 0%,#1a3a6e 100%);display:flex;align-items:center;padding:52px 40px 52px 48px;position:relative;overflow:hidden}
-.hero-left::after{content:'';position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:120px;height:120%;background:linear-gradient(145deg,#0b1d3a 0%,#1a3a6e 100%);clip-path:polygon(0 0,100% 10%,100% 90%,0 100%);z-index:2}
+
 .hero-left-inner{position:relative;z-index:3;max-width:440px}
-.hero-right{flex:0 0 45%;position:relative;overflow:hidden}
+.hero-right{flex:0 0 45%;position:relative;overflow:hidden;background:linear-gradient(145deg,#0b1d3a 0%,#1a3a6e 100%)}
 .hero-right img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:700px){.hero{flex-direction:column}.hero-right{flex:0 0 220px;width:100%}.hero-left{flex:1;padding:36px 24px 40px;justify-content:center;text-align:center}.hero-left::after{display:none}.hero-left-inner{max-width:100%}.hero-sub{margin-left:auto;margin-right:auto}.hero-cta-row{justify-content:center}}
 .live-dot{width:7px;height:7px;background:#34d399;border-radius:50%;animation:pulse 2s infinite;display:inline-block}
