@@ -726,17 +726,37 @@ function calcUC(){
   const wa=parseFloat(document.getElementById('workAllowance').value)||0;
   const adv=parseFloat(document.getElementById('advancePayments').value)||0;
   const otd=parseFloat(document.getElementById('otherDed').value)||0;
-  if(!ent){showErr('ucAlert','Please enter a total entitlement amount');document.getElementById('ucResult').classList.remove('show');return false;}
+
+  if(!ent){
+    showErr('ucAlert','Please enter a total entitlement amount');
+    document.getElementById('ucResult').classList.remove('show');
+    return false;
+  }
+
   const aboveAllow=Math.max(0,net-wa);
   const taperDed=aboveAllow*0.55;
-  const payment=Math.max(0,ent-taperDed-adv-otd);
-  const rows=[['Total entitlement',fmt(ent)],['Work allowance (disregarded)',fmt(Math.min(wa,net))+' not counted'],['Earnings above allowance',fmt(aboveAllow)],['UC reduction (55% taper)','−'+fmt(taperDed)]];
+
+  const totalDed = taperDed + adv + otd;
+
+  const payment=Math.max(0,ent-totalDed);
+
+  const rows=[
+    ['Total entitlement',fmt(ent)],
+    ['Work allowance (disregarded)',fmt(Math.min(wa,net))+' not counted'],
+    ['Earnings above allowance',fmt(aboveAllow)],
+    ['UC reduction (55% taper)','−'+fmt(taperDed)]
+  ];
+
   if(adv)rows.push(['Advance repayments','−'+fmt(adv)]);
   if(otd)rows.push(['Other deductions','−'+fmt(otd)]);
+
+  rows.push(['Total deductions','−'+fmt(totalDed)]);
+
   rows.push(['Total you receive',fmt(payment)]);
+
   document.getElementById('ucTable').innerHTML=buildRows(rows);
   document.getElementById('mUCPayment').textContent=fmt(payment);
-  document.getElementById('mUCReduction').textContent=fmt(taperDed);
+  document.getElementById('mUCReduction').textContent=fmt(totalDed);
   document.getElementById('ucResult').classList.add('show');
   showOk('ucOk');
   return true;
