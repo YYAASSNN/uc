@@ -261,7 +261,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .share-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;flex-shrink:0}
 .share-btn:hover{opacity:1;transform:translateY(-1px)}
 .share-btn svg{width:14px;height:14px;flex-shrink:0}
-.back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:none;border-radius:999px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(10,25,60,0.22);cursor:pointer;z-index:120;transition:background 0.18s,transform 0.18s,box-shadow 0.18s}.back-to-top:hover{background:var(--blue);transform:translateY(-2px)}.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.back-to-top{right:12px;bottom:12px}}
+.back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:none;border-radius:999px;background:#f97316;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(249,115,22,0.4);cursor:pointer;z-index:120;transition:background 0.18s,transform 0.18s,opacity 0.25s;opacity:0;pointer-events:none}.back-to-top.btt-visible{opacity:1;pointer-events:auto}.back-to-top:hover{background:#ea6c00;transform:translateY(-2px)}.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.back-to-top{right:12px;bottom:12px}}
 </style>
 
 <a class="skip-link" href="#section-income">Skip to calculator</a>
@@ -860,6 +860,23 @@ function copyLink(){
 }
 
 calcEntitlement();
+/* BACK-TO-TOP: only show when share-bar footer is in view */
+(function(){
+  var btn = document.querySelector('.back-to-top');
+  var bar = document.querySelector('.share-bar');
+  if(!btn || !bar) return;
+  function updateBTT(){
+    var barTop = bar.getBoundingClientRect().top;
+    if(barTop < window.innerHeight){
+      btn.classList.add('btt-visible');
+    } else {
+      btn.classList.remove('btt-visible');
+    }
+  }
+  window.addEventListener('scroll', updateBTT, {passive:true});
+  window.addEventListener('resize', updateBTT, {passive:true});
+  updateBTT();
+})();
 </script>
 </body>
 </html>
@@ -953,7 +970,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 .share-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;transition:opacity 0.15s,transform 0.15s;flex-shrink:0}
 .share-btn:hover{opacity:1;transform:translateY(-1px)}
 .share-btn svg{width:14px;height:14px;flex-shrink:0}
-.back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:none;border-radius:999px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(10,25,60,0.22);cursor:pointer;z-index:120;transition:background 0.18s,transform 0.18s,box-shadow 0.18s}.back-to-top:hover{background:var(--blue);transform:translateY(-2px)}.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.back-to-top{right:12px;bottom:12px}}
+.back-to-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border:none;border-radius:999px;background:#f97316;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(249,115,22,0.4);cursor:pointer;z-index:120;transition:background 0.18s,transform 0.18s,opacity 0.25s;opacity:0;pointer-events:none}.back-to-top.btt-visible{opacity:1;pointer-events:auto}.back-to-top:hover{background:#ea6c00;transform:translateY(-2px)}.back-to-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}@media(max-width:560px){.back-to-top{right:12px;bottom:12px}}
 </style>
 </head>
 <body>
@@ -1214,6 +1231,23 @@ async function submitLegalContact(){
   btn.disabled=false;
   btn.innerHTML='<svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send message';
 }
+/* BACK-TO-TOP: only show when share-bar footer is in view */
+(function(){
+  var btn = document.querySelector('.back-to-top');
+  var bar = document.querySelector('.share-bar');
+  if(!btn || !bar) return;
+  function updateBTT(){
+    var barTop = bar.getBoundingClientRect().top;
+    if(barTop < window.innerHeight){
+      btn.classList.add('btt-visible');
+    } else {
+      btn.classList.remove('btt-visible');
+    }
+  }
+  window.addEventListener('scroll', updateBTT, {passive:true});
+  window.addEventListener('resize', updateBTT, {passive:true});
+  updateBTT();
+})();
 </script>
 </body>
 </html>`;
