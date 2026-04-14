@@ -485,7 +485,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
       Not legal advice · <a href="/legal">Legal &amp; Privacy</a>
     </span>
     <div class="share-bar-dot"></div>
-    <span class="share-bar-legal-text">© 2025 uccalc.co.uk — All rights reserved.</span>
+    <span class="share-bar-legal-text">© 2026 uccalc.co.uk — All rights reserved.</span>
   </div>
   <div class="share-bar-row">
     <span class="share-bar-label">Share</span>
@@ -1004,7 +1004,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 
 <div class="legal-hero">
   <h1>Legal &amp; <em>Privacy</em></h1>
-  <p>Everything you need to know about how this tool works, what we collect, and your rights. Last updated April 2025.</p>
+  <p>Everything you need to know about how this tool works, what we collect, and your rights. Last updated April 2026.</p>
 </div>
 
 <nav class="toc" aria-label="Jump to section">
@@ -1021,7 +1021,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
 <main class="page">
   <div class="updated-tag">
     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-    Last updated: April 2025
+    Last updated: April 2026
   </div>
 
   <section id="disclaimer" class="card card-blue" style="scroll-margin-top:88px">
@@ -1132,7 +1132,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
     </div>
     <div class="card-body">
       <p>If you have any questions about this privacy policy, the disclaimer, or how this tool works — or if you believe any figures in the calculator are incorrect or out of date — please send us a message below and we will get back to you.</p>
-      <p>This page was last updated in <strong>April 2025</strong>. We may update it from time to time — please check back periodically.</p>
+      <p>This page was last updated in <strong>April 2026</strong>. We may update it from time to time — please check back periodically.</p>
       <div id="contactSuccess" style="display:none;align-items:center;gap:9px;font-size:13px;font-weight:700;padding:10px 14px;border-radius:8px;margin:14px 0;background:#d1fae5;color:#059669;border:1px solid #a7f3d0">
         <svg viewBox="0 0 24 24" style="width:15px;height:15px;flex-shrink:0;fill:none;stroke:#059669;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         Message sent! We'll be in touch soon.
@@ -1173,7 +1173,7 @@ body{font-family:'DM Sans',sans-serif;font-weight:600;background:#eaf0fb;color:v
       Not legal advice · <a href="/legal">Legal &amp; Privacy</a>
     </span>
     <div class="share-bar-dot"></div>
-    <span class="share-bar-legal-text">© 2025 uccalc.co.uk — All rights reserved.</span>
+    <span class="share-bar-legal-text">© 2026 uccalc.co.uk — All rights reserved.</span>
   </div>
   <div class="share-bar-row">
     <span class="share-bar-label">Share</span>
